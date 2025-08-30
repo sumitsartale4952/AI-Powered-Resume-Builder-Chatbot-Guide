@@ -1,0 +1,112 @@
+# resume-chatbot/config.yaml
+
+# Application Core Settings
+app:
+  host: "0.0.0.0"           # Server binding address
+  port: 5000                 # Server port
+  debug: True              # Debug mode (False in production)
+  secret_key: "your-secret-key-here"  # Flask secret key
+  session_lifetime: 3600     # Session lifetime in seconds (1 hour)
+
+# Database Configuration
+database:
+  uri: "mongodb://localhost:27017/"  # MongoDB connection string
+  name: "resume_builder"     # Database name
+  timeout: 5000              # Connection timeout in ms
+
+# File Storage Settings
+storage:
+  image_upload_dir: "./uploads/images"  # User photo storage
+  resume_output_dir: "./generated_resumes"  # Generated PDF storage
+  allowed_extensions:      # Permitted file types
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+  max_file_size_bytes: 2097152  # 2MB limit (value in bytes)
+  virus_scan: False        # Enable virus scanning (requires ClamAV)
+
+# Chatbot Configuration
+chatbot:
+  domains:                 # Available career domains
+    - "IT"
+    - "Healthcare"
+    - "Marketing"
+    - "Finance"
+    - "Engineering"
+  experience_levels:       # Experience categories
+    - "Fresher"
+    - "1-2 years"
+    - "3-5 years"
+    - "5+ years"
+  response_timeout: 300    # Seconds before considering session inactive
+  skip_keywords:           # Commands to skip optional sections
+    - "skip"
+    - "not now"
+    - "later"
+
+# ATS Optimization Settings
+ats:
+  keywords:                # Important keywords for scoring
+    - "project management"
+    - "machine learning"
+    - "team leadership"
+    - "data analysis"
+    - "software development"
+  required_sections:       # Mandatory resume sections
+    - "Experience"
+    - "Education"
+    - "Skills"
+    - "Certifications"
+  score_thresholds:        # ATS score ranges
+    good: 70               # Minimum score for "good" rating
+    excellent: 85           # Minimum score for "excellent" rating
+  formatting_checks:       # Required formatting elements
+    - "bullet_points"
+    - "consistent_dates"
+    - "section_headings"
+
+# Template Configuration
+templates:
+  available_templates:     # Supported resume templates
+    - "modern"
+    - "classic"
+    - "minimalist"
+  default_template: "modern"  # Fallback template
+  preview_template: "preview.html"  # Preview template name
+
+# NLP Processing Settings
+nlp:
+  model: "en_core_web_lg"  # spaCy model to use
+  analysis_level: "deep"    # Analysis depth (basic/deep)
+  skill_threshold: 0.85     # Confidence threshold for skill detection
+
+# Progress Tracking
+progress:
+  steps:                    # Progress milestones
+    start: 0
+    domain_selected: 15
+    experience_set: 30
+    education_added: 45
+    work_history_complete: 60
+    skills_added: 75
+    final_review: 90
+    completed: 100
+  session_expiry: 86400     # Session expiry time in seconds (24h)
+
+# Logging Configuration
+logging:
+  log_file: "./logs/app.log"  # Main application log
+  log_level: "INFO"         # Logging verbosity
+  max_size: 10485760        # Max log file size (10MB)
+  backup_count: 5           # Number of rotated logs to keep
+
+# Security Settings
+security:
+  allowed_hosts:            # CORS allowed hosts
+    - "http://localhost:5000"
+    - "https://yourdomain.com"
+  content_security_policy: "default-src 'self'"
+  password_complexity:      # For future auth features
+    min_length: 8
+    require_symbol: True
+    require_number: True

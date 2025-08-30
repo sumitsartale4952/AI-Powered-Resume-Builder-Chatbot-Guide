@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .resume {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0;
+        }
+        section h2 {
+            font-size: 1.5em;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .job h3 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .job p {
+            margin: 5px 0;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        @media print {
+            .resume {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <header>
+            <h1>John Doe</h1>
+            <p>Financial Analyst | Trader</p>
+            <p>Email: john.doe@example.com | Phone: (123) 456-7890 | LinkedIn: linkedin.com/in/johndoe</p>
+        </header>
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>Experienced financial analyst with a strong background in trading and market analysis. Proficient in using various trading platforms and tools to maximize investment returns.</p>
+        </section>
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>Senior Trader</h3>
+                <p>ABC Trading Firm | January 2020 - Present</p>
+                <ul>
+                    <li>Managed a portfolio of $10 million, achieving an average annual return of 15%.</li>
+                    <li>Developed and implemented trading strategies based on technical and fundamental analysis.</li>
+                    <li>Collaborated with a team of analysts to identify market trends and investment opportunities.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Financial Analyst</h3>
+                <p>XYZ Investment Bank | June 2017 - December 2019</p>
+                <ul>
+                    <li>Conducted in-depth financial analysis of publicly traded companies.</li>
+                    <li>Prepared detailed reports and presentations for senior management and clients.</li>
+                    <li>Assisted in the development of investment strategies and portfolio management.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="education">
+            <h2>Education</h2>
+            <p>Bachelor of Science in Finance</p>
+            <p>University of Example | Graduated: May 2017</p>
+        </section>
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Trading Platforms: MetaTrader, Thinkorswim, Bloomberg Terminal</li>
+                <li>Financial Analysis: Excel, Python, R</li>
+                <li>Market Research: Technical Analysis, Fundamental Analysis</li>
+                <li>Languages: English (fluent), Spanish (conversational)</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

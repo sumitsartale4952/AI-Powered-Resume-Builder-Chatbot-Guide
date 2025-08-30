@@ -1,0 +1,1471 @@
+2025-03-19 10:11:28,207 - root - ERROR - SpaCy model en_core_web_lg not found. Installing...
+2025-03-19 10:20:28,136 - root - ERROR - SpaCy model en_core_web_lg not found. Installing...
+2025-03-19 10:21:51,515 - root - ERROR - SpaCy model en_core_web_lg not found. Installing...
+2025-03-19 10:23:16,151 - root - ERROR - SpaCy model en_core_web_lg not found. Installing...
+2025-03-19 10:48:05,551 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.161.175:5000
+2025-03-19 10:48:05,552 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 10:52:55,318 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.161.175:5000
+2025-03-19 10:52:55,318 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 10:56:53,952 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.161.175:5000
+2025-03-19 10:56:53,953 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 11:00:59,757 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:00:59,758 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 59, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    "user_data": UserData().dict(),
+                 ^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 65, in home
+    return render_template('error.html'), 500
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2025-03-19 11:00:59,767 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:00:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:00:59,814 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:00:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-19 11:01:01,172 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:01:01,173 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 59, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    "user_data": UserData().dict(),
+                 ^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 65, in home
+    return render_template('error.html'), 500
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2025-03-19 11:01:01,179 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:01:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:01:12,400 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:01:12,401 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 59, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    "user_data": UserData().dict(),
+                 ^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 65, in home
+    return render_template('error.html'), 500
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2025-03-19 11:01:12,409 - werkzeug - INFO - 192.168.161.175 - - [19/Mar/2025 11:01:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:01:12,483 - werkzeug - INFO - 192.168.161.175 - - [19/Mar/2025 11:01:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-19 11:01:20,863 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:01:20,864 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 59, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    "user_data": UserData().dict(),
+                 ^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 65, in home
+    return render_template('error.html'), 500
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+2025-03-19 11:01:20,867 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:01:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:03:43,418 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.161.175:5000
+2025-03-19 11:03:43,418 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 11:05:57,426 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.161.175:5000
+2025-03-19 11:05:57,426 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 11:05:57,540 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:05:57,585 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:05:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:05:58,011 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:05:58] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-19 11:05:58,026 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:05:58] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-19 11:05:58,193 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:05:58] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=zerzeYtdhfmuWK6TLFGn HTTP/1.1" 200 -
+2025-03-19 11:05:58,514 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:05:58] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-19 11:06:52,896 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:06:52,965 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:06:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:06:53,214 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:06:53] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-19 11:06:53,305 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:06:53] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-19 11:06:53,632 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:06:53] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=zerzeYtdhfmuWK6TLFGn HTTP/1.1[0m" 304 -
+2025-03-19 11:06:53,896 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:06:53] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-19 11:08:39,663 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:08:39,714 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:08:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:08:39,738 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:08:39] "GET /static/css/main.css HTTP/1.1" 200 -
+2025-03-19 11:08:39,932 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:08:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-19 11:08:42,240 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:08:42,242 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:08:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:08:42,443 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:08:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:08:44,053 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:08:44,055 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:08:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:08:44,379 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:08:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:13:56,258 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:13:56,260 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:13:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:13:56,288 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:13:56] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:18:30,629 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:18:30,630 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:18:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:18:30,649 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:18:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:18:51,291 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:18:51,292 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:18:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:18:51,454 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.161.175:5000
+2025-03-19 11:18:51,454 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 11:18:51,602 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:18:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:18:57,377 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:18:57,378 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:18:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:18:57,550 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:18:57] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:18:58,381 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:18:58,381 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:18:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:18:58,694 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:18:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:19:00,005 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:19:00,006 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:19:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:19:00,036 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:19:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:20:11,542 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:20:11,543 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:20:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:20:11,556 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:20:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:32:26,207 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.161.175:5000
+2025-03-19 11:32:26,207 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 11:32:46,847 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:32:46,852 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:32:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:32:46,902 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:32:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:34:11,330 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:34:11,332 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:34:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:34:11,345 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:34:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:34:12,287 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:34:12,288 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:34:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:34:12,595 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:34:12] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:34:13,013 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:34:13,014 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:34:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:34:13,026 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:34:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:34:17,438 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:34:17,439 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:34:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:34:17,748 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:34:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 11:34:29,688 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 11:34:29,689 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:34:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 11:34:29,704 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 11:34:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 12:11:58,207 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 12:11:58,208 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:11:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 12:11:58,223 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:11:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 12:11:59,146 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 12:11:59,146 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:11:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 12:11:59,457 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:11:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 12:11:59,983 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 12:11:59,984 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:11:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 12:11:59,999 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:11:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 12:29:12,649 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 12:29:12,651 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:29:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 12:29:12,666 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:29:12] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 12:29:13,574 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 12:29:13,575 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:29:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 12:29:13,889 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:29:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 12:31:28,653 - root - CRITICAL - Session initialization failed: 6 validation errors for UserData
+name
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+email
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+phone
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+domain
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+experience_level
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+skills
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-03-19 12:31:28,654 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:31:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 12:31:28,672 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:31:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 12:37:25,021 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.161.175:5000
+2025-03-19 12:37:25,021 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 12:37:42,100 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 12:37:42,109 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:37:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 12:37:42,163 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:37:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 12:46:06,414 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 12:46:06,416 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:46:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 12:46:06,427 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:46:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 12:46:19,475 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:46:19] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 12:57:47,346 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 12:57:47,347 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:57:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 12:57:47,369 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 12:57:47] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:11:25,635 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 13:11:25,637 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:11:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 13:11:25,652 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:11:25] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:11:32,114 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 13:11:32,115 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:11:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 13:11:32,422 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:11:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:11:33,321 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 13:11:33,322 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:11:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 13:11:33,340 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:11:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:13:13,617 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 13:13:13,637 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:13:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 13:13:13,649 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:13:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:13:14,874 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 13:13:14,876 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:13:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 13:13:15,182 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:13:15] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:13:16,073 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 13:13:16,073 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:13:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 13:13:16,086 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:13:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:13:16,334 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 13:13:16,336 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:13:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 13:13:16,522 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:13:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:13:16,958 - root - CRITICAL - Session initialization failed: 'Chatbot' object has no attribute '_initialize_session'
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Chatbot' object has no attribute '_initialize_session'
+2025-03-19 13:13:16,960 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:13:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 13:13:16,974 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:13:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:54:17,454 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+2025-03-19 13:54:17,454 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:54:59,950 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+2025-03-19 13:54:59,950 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:55:00,365 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 13:55:00,376 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:55:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 13:55:00,475 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:55:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:55:00,519 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:55:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-19 13:56:06,467 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 13:56:06,518 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:56:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 13:56:06,590 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:56:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 13:56:07,592 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:56:07] "[33mGET /index.html HTTP/1.1[0m" 404 -
+2025-03-19 13:56:28,101 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:56:28] "[33mGET /index.html HTTP/1.1[0m" 404 -
+2025-03-19 13:56:29,250 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 13:56:29,275 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 13:56:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:00:40,179 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:00:40,211 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:00:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:00:40,239 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:00:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:00:41,226 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:00:41,228 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:00:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:00:41,538 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:00:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:00:45,223 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:00:45,225 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:00:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:00:45,265 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:00:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:00:45,549 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:00:45,551 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:00:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:00:45,861 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:00:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:01:15,614 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:01:15,619 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:01:15,969 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:15] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:01:16,213 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-19 14:01:18,330 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:01:18,333 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:01:18,352 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:01:18,809 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:01:18,811 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:01:19,112 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:19] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:01:19,469 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:01:19,471 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:01:19,487 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:19] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:01:34,992 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:01:34,995 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:01:35,310 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:35] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:01:39,253 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:01:39,257 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:01:39,288 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:01:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:02:16,913 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:02:16,915 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:02:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:02:17,224 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:02:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:02:18,874 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:02:18,878 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:02:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:02:18,903 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:02:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:02:20,610 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    chatbot._initialize_session(session_id)
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:02:20,613 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:02:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:02:20,921 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:02:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:19:24,952 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    session['session_id'] = session_id
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:19:24,980 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:19:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:19:25,005 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:19:25] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:19:28,859 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    session['session_id'] = session_id
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:19:28,864 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:19:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:19:29,170 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:19:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:19:29,634 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    session['session_id'] = session_id
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:19:29,635 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:19:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:19:29,662 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:19:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:19:29,900 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    session['session_id'] = session_id
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:19:29,902 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:19:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:19:30,026 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:19:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:19:30,510 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    session['session_id'] = session_id
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:19:30,515 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:19:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:19:30,540 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:19:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:20:37,976 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    session['session_id'] = session_id
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:20:37,979 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:20:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:20:38,004 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:20:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:20:38,715 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    session['session_id'] = session_id
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:20:38,717 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:20:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:20:39,034 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:20:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-03-19 14:20:39,389 - root - CRITICAL - Session initialization failed: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+Traceback (most recent call last):
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\app.py", line 91, in home
+    session['session_id'] = session_id
+  File "D:\AI Projects\AI-Powered Resume Builder Chatbot Guide\backend\chatbot_engine.py", line 21, in _initialize_session
+    default_user = UserData(
+                   ^^^^^^^^^
+  File "C:\Users\ssart\AppData\Roaming\Python\Python311\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UserData
+name
+  String should have at least 2 characters [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_too_short
+2025-03-19 14:20:39,392 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:20:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-19 14:20:39,419 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2025 14:20:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -

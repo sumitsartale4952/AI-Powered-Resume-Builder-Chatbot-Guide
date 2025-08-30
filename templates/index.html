@@ -1,0 +1,126 @@
+Guide\templates\index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI-powered resume builder with real-time chat assistance">
+    <title>AI Resume Builder</title>
+    
+    <!-- Fonts and Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="gradient-text">AI Resume Builder</h1>
+            <div class="progress-container">
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <span class="progress-label" id="progressLabel">0% Complete</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="chat-container" aria-label="Chat Interface">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Welcome message -->
+                    <div class="bot-message welcome-message">
+                        <p>👋 Welcome! I'm your AI resume building assistant.</p>
+                        <p>Let's create a professional resume together. What's your name?</p>
+                    </div>
+                    <div class="typing-indicator initial hidden">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <div class="options-container" id="optionsContainer" aria-label="Response Options">
+                        <!-- Dynamic options will be inserted here -->
+                    </div>
+                    
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="userInput" 
+                            placeholder="Type your response..." 
+                            aria-label="Your message"
+                            autocomplete="off"
+                        />
+                        <button 
+                            id="sendButton" 
+                            class="send-button" 
+                            aria-label="Send Message"
+                            title="Send message"
+                        >
+                            <svg class="send-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume-preview hidden" id="resumePreview" aria-label="Resume Preview">
+                <h2>Resume Preview</h2>
+                <div class="preview-content" id="previewContent">
+                    <!-- Preview content will be dynamically inserted -->
+                </div>
+            </section>
+
+            <section class="actions-section">
+                <div class="file-upload">
+                    <input 
+                        type="file" 
+                        id="photoUpload" 
+                        accept="image/*" 
+                        class="hidden"
+                        aria-label="Upload profile photo" 
+                    />
+                    <button 
+                        class="upload-btn" 
+                        onclick="document.getElementById('photoUpload').click()"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/>
+                        </svg>
+                        <span>Add Photo</span>
+                    </button>
+                </div>
+
+                <button class="download-btn hidden" id="downloadBtn" aria-label="Download Resume">
+                    <span>Download Resume</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                    </svg>
+                </button>
+            </section>
+        </main>
+
+        <!-- Templates for dynamic content -->
+        <template id="optionButtonTemplate">
+            <button class="option-btn" role="button"></button>
+        </template>
+
+        <template id="messageTemplate">
+            <div class="message">
+                <div class="message-content"></div>
+                <time class="message-time"></time>
+            </div>
+        </template>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Accessibility Enhancement -->
+    <div id="a11y-announcer" class="sr-only" aria-live="polite"></div>
+</body>
+</html>

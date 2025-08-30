@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error - Resume Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="error-container">
+        <h1>Oops! Something went wrong</h1>
+        <p>{{ error_message if error_message else 'An unexpected error occurred. Please try again.' }}</p>
+        <a href="index.html" class="button">Return to Home</a>
+    </div>
+</body>
+</html>
